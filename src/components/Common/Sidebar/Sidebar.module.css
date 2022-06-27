@@ -1,0 +1,33 @@
+/* * {
+    margin: 0 !important ;
+    padding: 0 !important ;
+    box-sizing: border-box;
+} */
+.sidebar_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: .5rem 3rem 3rem 0rem  !important;
+}
+.sidebar_list {
+    list-style-type: none;
+    display: flex;
+    padding-left: 1rem !important;
+    line-height: 2.5rem;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 200;
+    letter-spacing: .5px;
+    font-family: monospace;
+    cursor: pointer;
+}
+.sidebar_link {
+    text-decoration: none;
+    color: white;
+}
+@media (max-width : 540px) {
+    .sidebar_container {
+        display: none  ;
+    }
+}
