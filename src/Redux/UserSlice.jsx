@@ -1,14 +1,19 @@
 import {createSlice} from '@reduxjs/toolkit'
 
+const user = JSON.parse(window.localStorage.getItem('user'))
 const initialState = {
-    firstName : ''
+    user: user
 }
 const UserSlice = createSlice({
-    name : 'celahel',
+    name : 'fullname',
     initialState,
-    reducer : {
+    reducers : {
         UserDetails : (state, action) => {
-            state.firstName = action.payload
+            const {firstName, lastName} = action.payload
+            state.firstName = firstName
+            state.lastName = lastName
+            // state.lastName = action.payload.lastName
+            state = action.payload
         }
     }
 })

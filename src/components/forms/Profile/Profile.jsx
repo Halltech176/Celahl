@@ -1,14 +1,15 @@
 import React from 'react'
 import {CgArrowLongLeft} from 'react-icons/cg'
-import profile from './Profile.module.css'
+import profile from './Profile.module.css' 
+import {useSelector} from 'react-redux'
 import Sidebar from '../../Common/Sidebar/Sidebar'
-import {useAuth} from '../../../Context/UserContext'
+// import {useAuth} from '../../../Context/UserContext'
 import { useLocation } from 'react-router-dom'
 const Profile = () => {
   // const location = useLocation()
   // console.log(location.pathname);
 
-  const auth = useAuth()
+  // const auth = useAuth()
   return (
     <>
     <Sidebar/>

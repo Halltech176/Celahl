@@ -15,26 +15,29 @@ const Signin = () => {
   const [checked, setChecked] = useState(false)
 
 
-  // const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const selector = useSelector((state) => state.userDetails)
+  console.log(selector)
+  
+  const FullName = {
+    firstName,
+    lastName
+  }
+  window.localStorage.setItem('user', JSON.stringify(FullName))
+  const user = JSON.parse(localStorage.getItem('user'))
+  useEffect(() => {
+    dispatch(UserDetails(user))
+  }, [user])
 
-  // useEffect(() => {
-  //   dispatch(UserDetails(firstName))
-  // }, [firstName])
+  console.log(selector)
 
-  // const selector = useSelector((state) => state)
-  // const handleLogin = () => {
-  //   console.log(selector)
-  //   // dispatch(userDetails(firstName))
-  // }
+  const handleLogin = (e) => {
+    e.preventDefault()
+    navigate('/profile')
+    console.log(selector)
+}
 
-
-  // const auth = useAuth()
-  // const navigate = useNavigate()
-
-  // const handleLogin = () => {
-  //   auth.Login(firstName)
-  //   navigate('/profile')
-  // }
 
   return (
     <div className="signup">
@@ -98,7 +101,7 @@ const Signin = () => {
         <p>Forgotten password</p>
        </div>
        <div className="d-flex justify-content-center col-md-12 text-center">
-     <button className="btn btn-primary py-2 px-5">Create Account </button>
+     <button className="btn btn-primary py-2 px-5" onClick ={handleLogin}>Create Account </button>
        </div>
      </form>
     </div>

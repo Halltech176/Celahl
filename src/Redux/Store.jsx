@@ -2,7 +2,7 @@ import {configureStore} from '@reduxjs/toolkit'
 import {UserReducer } from './UserSlice'
 const Store = configureStore({
     reducer : {
-        celahel : UserReducer
+        userDetails : UserReducer
     }
 })
 export default Store
