@@ -1,0 +1,49 @@
+.property_container {
+    margin:3rem 3rem 5rem 17rem !important; 
+    /* margin-left: 10rem !important; */
+}
+.property_text  {
+    font-family: monospace;
+}
+.property_image {
+    /* width: 17.5rem !important; */
+    /* display: inline; */
+    /* margin: 1rem; */
+}
+.image_container {
+    /* width : 18rem; */
+    position : relative;
+}
+.sell_badge {
+    position : absolute;
+    top :2rem;
+    left : 2rem;
+    background-color : rgba(255, 0, 0, 0.8);
+    opacity : 1;
+}
+.rent_badge {
+    position : absolute;
+    top :2rem;
+    left : 2rem;
+    background-color : rgba(0, 255, 0, 0.8);
+    opacity : 1;
+}
+.property_text {
+    position : absolute;
+    bottom : 1rem;
+    left : 1.2rem;
+    color : white;
+    font-size: 0.8rem;
+}
+@media (max-width : 540px) {
+    .property_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto !important;
+    }
+    .property_image {
+        width: 5rem !important;
+    }
+}

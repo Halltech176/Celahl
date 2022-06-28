@@ -1,8 +1,9 @@
 import React, {useState}  from 'react'
-import Sidebar from '../Common/Sidebar'
+import Sidebar from '../../Common/Sidebar/Sidebar'
 import {CgArrowLongLeft} from 'react-icons/cg'
-import properties from './Properties.module.css'
-const Properties = () => {
+import properties from './AddProperties.module.css'
+import property_image from '../../../Assets/house.png'
+const AddProperties = () => {
     const [property, setProperty] = useState('')
     const [address, setAddress] = useState('')
   return (
@@ -12,7 +13,7 @@ const Properties = () => {
     <div className="d-flex justify-content-end my-3">
     <div className={`${properties.property_search}  input-group w-50 `}>
         <input type="search" name="" className='form-control w-75' id="" />
-        <div className="input-group-append"><span className="input-group-text  text-light bg-primary">search</span></div>
+        <div className="input-group-append d-inline"><span className="input-group-text  text-light bg-primary">search</span></div>
     </div>
     </div>
     <div className='d-flex align-items-center'>
@@ -20,6 +21,19 @@ const Properties = () => {
     <h2  className={`${properties.profile_text} ms-4  text-primary`}> Edit properties</h2>
    </div>
    <h4 className='text-primary fw-100'>Upload Property Picture</h4>
+   <div className={`${properties.properties_image} row`}>
+  <div className='main_img col-md-4'>
+  <img src = {property_image} alt='img' />
+  </div>
+  <div className='previews col-md-7 ms-5'>
+  <img src = {property_image}  alt='img' className='w-25 m-3' />
+  <img src = {property_image}  alt='img' className='w-25 m-3' />
+  <img src = {property_image}   alt='img'className='w-25 m-3' />
+  <img src = {property_image}  alt='img' className='w-25 m-3' />
+  <img src = {property_image}  alt='img' className='w-25 m-3' />
+  <img src = {property_image}  alt='img' className='w-25 m-3' />
+  </div>
+   </div>
    <h4 className='text-primary fw-100'>Enter Correct Property Details</h4>
 
    <form id='form-container' className='w-100 my-3 row g-4 justify-content-start'>
@@ -103,10 +117,11 @@ const Properties = () => {
         </div>
         
        </div>
+       <button className='btn btn-primary w-25 mx-auto'>SAVE</button>
        </form>
   </div>
   </>
   )
 }
 
-export default Properties
+export default AddProperties

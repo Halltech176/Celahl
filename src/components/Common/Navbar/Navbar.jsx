@@ -4,6 +4,7 @@ import "./Navbar-styles.scss";
 import Logo from '../../Logo/Logo.component'
 
 function Navbar() {
+  const user = JSON.parse(window.localStorage.getItem('user'))
   const pathname = window.location.href;
   console.log(pathname);
   pathname !== 'http://localhost:3000/'? console.log('other'): console.log(pathname);;
@@ -102,19 +103,20 @@ function Navbar() {
                 </button>
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to ='/signin'>
-                <button
-                  className={
-                    pathname !== "http://localhost:3000/"
-                      ? "btn btn-outline-primary px-md-5 text-prmary"
-                      : "btn btn-outline-light px-md-5 text-light"
-                  }
-                >
-                  Create Account
-                </button>
-                </Link>
-              </li>
+    <li className="nav-item">
+      <Link to ='/signin'>
+      <button
+        className={
+          pathname !== "http://localhost:3000/"
+            ? "btn btn-outline-primary px-md-5 text-prmary"
+            : "btn btn-outline-light px-md-5 text-light"
+        }
+      >
+        Create Account
+      </button>
+      </Link>
+    </li>
+ 
             </ul>
           </div>
         </div>
