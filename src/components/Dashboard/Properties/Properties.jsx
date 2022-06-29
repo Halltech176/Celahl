@@ -10,15 +10,15 @@ const Properties = () => {
     <>
       <Sidebar/>
   <div className ={`${properties.property_container}` }>
-    <div className="d-flex justify-content-end my-3">
+    <div className={`${properties.search_container} d-flex justify-content-end my-3`}>
     <div className={`${properties.property_search}  input-group w-50 `}>
         <input type="search" name="" className='form-control w-75' id="" />
         <div className="input-group-append d-inline"><span className="input-group-text  text-light bg-primary">search</span></div>
     </div>
     </div>
-    <div className='d-flex justify-content-between my-3'>
+    <div className={`${properties.add_property} my-3 mx-2`}>
     <h2  className={`${properties.profile_text} ms-4  text-primary`}> My Properties</h2>
-   <Link to ='/addproperty'> <button className='btn btn-primary px-5'>Add New</button></Link>
+   <Link to ='/addproperty' className={`${properties.profile_text}`}> <button className='btn btn-primary px-5'>Add New</button></Link>
    </div>
 
    <div className={`${properties.properties_image} d-flex gap-2 flex-wrap  `}>
