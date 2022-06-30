@@ -1,0 +1,9 @@
+
+.about{
+    padding: 0 !important;
+    box-sizing: content-box;
+}
+.bg-purple{
+    background-color: var(--bs-purple) !important;
+    color: white;
+}

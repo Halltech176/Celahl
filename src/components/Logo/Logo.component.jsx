@@ -1,12 +1,11 @@
 import './Logo-styles.scss'
-import {IoHomeOutline} from 'react-icons/io5'
+// import {IoHomeOutline} from 'react-icons/io5'
+import LogoImg from '../../Assets/logo.png'
 import React from 'react'
 
 function Logo() {
   return (
-    <div>
-    <h1 className=''>CEL<IoHomeOutline/>HL</h1>
-    </div>
+    <img src={LogoImg} alt="Logo" />
   )
 }
 

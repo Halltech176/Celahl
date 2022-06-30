@@ -6,25 +6,40 @@ import {IoKeySharp} from 'react-icons/io5'
 import {AiFillPropertySafety} from 'react-icons/ai'
 import {MdMenu, MdClose}  from 'react-icons/md'
 import profile_image from "../../../Assets/profile_image.png"
-import {useSelector} from 'react-redux'
+// import {useSelector} from 'react-redux'
 const Sidebar = () => {
-
     const [open, setOpen] = useState('block')
-    const user = JSON.parse(window.localStorage.getItem('user'))
-    const names = useSelector((state) => state.userDetails.user)
-    console.log(names)
-    const {firstName, lastName} = user
-    // console.log(user)
-    const Open = () => {
-        setOpen('block')
+    const [dimension, setDimension] = useState(0)
+
+
+const UpdateDimension = () => {
+    const width = window.innerWidth
+    setDimension(width)
+    if(width <= 540) {
+        setOpen('none')
+    }
 }
+// useEffect(() => {
+    window.addEventListener('resize', UpdateDimension)
+//     UpdateDimension()
+// }, [])
+
+
+    const Sidebar_style = {
+        display : open
+    }
+    const user = JSON.parse(window.localStorage.getItem('user'))
+    // const names = useSelector((state) => state.userDetails.user)
+    // console.log(names)
+    const {firstName, lastName} = user
+
         return (
         <>
-       <div onClick={() => setOpen('block')}>
-       <MdMenu size='2rem' />
+       <div>
+       <MdMenu size='2rem'onClick={() => setOpen('block')} />
        </div>
-        <aside style={{display : open}} className={`${sidebar.sidebar_container}  bg-primary`}>
-            <div className="text-end" onClick={() => setOpen('none')}> <MdClose className=' text-white' size='2rem'/></div>
+        <aside style={Sidebar_style} className={`${sidebar.sidebar_container}  bg-primary`}>
+            <div className={`${sidebar.close_menu_btn}`}> <MdClose className=' text-white' size='2rem' onClick={() => setOpen('none')}/></div>
             <div className={`${sidebar.profile} d-flex flex-column justify-content-center align-items-center my-4`}>
         <Link to='/profile'>
         <img src={profile_image} alt="user-profile" className={`${sidebar.profile_image}`} />

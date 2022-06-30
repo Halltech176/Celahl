@@ -1,19 +1,24 @@
 import React, { Fragment } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import "./Navbar-styles.scss";
 import Logo from '../../Logo/Logo.component'
+import DarkLogo from '../../../Assets/DarkLogo.png'
 
 function Navbar() {
-  const pathname = window.location.href;
-  console.log(pathname);
-  pathname !== 'http://localhost:3000/'? console.log('other'): console.log(pathname);;
+  const location = useLocation();
+  // console.log(
+  //   location
+  // );
+  // constlocation = window.location;
+  console.log(location.pathname === '/', location.pathname);
+ location.pathname !== '/'? console.log('other'): console.log(location.pathname)
   return (
     <Fragment>
       <nav
         className={
-          pathname !== "http://localhost:3000/"
-            ? "navbar navbar-expand-lg navbar-light text-primary navBackDrop "
-            : "position-absolute w-100 text-light navbar navbar-expand-lg navbar-light"
+         location.pathname !== '/'
+            ? "navbar navbar-expand-lg navbar-dark text-primary bg-transparent"
+            : "navbar nav navbar-expand-lg navbar-dark bg-primary"
         }
         
         // navbar-expand-lg
@@ -21,7 +26,10 @@ function Navbar() {
         style={{ top: "0", left: "0" }}
       >
         <div className="container-fluid justify-content-between">
-          <Logo />
+         {
+          location.pathname === '/'? <Logo />: <img src={DarkLogo} alt="" />
+         }
+         
           <button
             className="navbar-toggler"
             type="button"
@@ -41,7 +49,7 @@ function Navbar() {
               <li className="nav-item px-md-3">
                 <Link
                   className={
-                    pathname !== "http://localhost:3000/"
+                   location.pathname !=='/'
                       ? "nav-link active"
                       : "nav-link active text-light"
                   }
@@ -54,7 +62,7 @@ function Navbar() {
               <li className="nav-item px-md-3">
                 <Link
                   className={
-                    pathname !== "http://localhost:3000/"
+                   location.pathname !== '/'
                       ? "nav-link text-primary"
                       : "nav-link text-light"
                   }
@@ -67,7 +75,7 @@ function Navbar() {
               <li className="nav-item px-md-3">
                 <Link
                   className={
-                    pathname !== "http://localhost:3000/"
+                   location.pathname !== '/'
                       ? "nav-link text-primary"
                       : "nav-link text-light"
                   }
@@ -80,7 +88,7 @@ function Navbar() {
               <li className="nav-item px-md-3">
                 <Link
                   className={
-                    pathname !== "http://localhost:3000/"
+                   location.pathname !== '/'
                       ? "nav-link text-primary"
                       : "nav-link text-light"
                   }
@@ -94,9 +102,9 @@ function Navbar() {
                 <Link to ='/login'>
                 <button
                   className={
-                    pathname !== "http://localhost:3000/"
+                   location.pathname !== '/'
                       ? "btn btn-outline-primary px-md-5 text-prmary"
-                      : "btn btn-outline-light px-md-5 text-light"
+                      : "btn btn-outline-light px-md-5 text-light bg-primary"
                   }
                 >  Login
                 </button>
@@ -106,9 +114,9 @@ function Navbar() {
                 <Link to ='/signin'>
                 <button
                   className={
-                    pathname !== "http://localhost:3000/"
-                      ? "btn btn-outline-primary px-md-5 text-prmary"
-                      : "btn btn-outline-light px-md-5 text-light"
+                   location.pathname !== '/'
+                      ? "btn btn-outline-primary px-md-5 text-primary"
+                      : "btn btn-outline-light px-md-5 text-primary btn-light"
                   }
                 >
                   Create Account

@@ -26,8 +26,17 @@
     text-decoration: none;
     color: white;
 }
+.close_menu_btn {
+    display : none;
+    position : absolute;
+    right : 0;
+    transition: display ease-in 5s;
+}
 @media (max-width : 540px) {
     .sidebar_container {
-        display: none  ;
+        /* display : none !important; */
+    }
+    .close_menu_btn {
+        display: block;
     }
 }

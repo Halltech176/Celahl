@@ -1,102 +1,135 @@
-import about from './About.module.css'
+import "./About.css";
 
-import About1 from "../../../Assets/About1.png"
-import About2 from "../../../Assets/About2.png"
-import About3 from "../../../Assets/About3.png"
-import About4 from "../../../Assets/About4.png"
-import About5 from "../../../Assets/About5.png"
+import About1 from "../../../Assets/About1.png";
+import About2 from "../../../Assets/About2.png";
+import About3 from "../../../Assets/About3.png";
+import About4 from "../../../Assets/About4.png";
+import About5 from "../../../Assets/About5.png";
 const About = () => {
-
-    // console.log(navigate);
-    return (
-      <div className="container-fluid me-3 ">
-          <div className={`${about.about_container} `}>
-            <div className="relaxation -text ">
-                <h3 className="text-primary text-center my-3">
-                    Buy/Book Relaxation
-                </h3>
-                <h6 className=''>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales augue egestas nunc, auctor magna. In sit molestie nec urna auctor vitae. Id vel odio vitae aenean lectus sed gravida elementum. Senectus venenatis quis aliquet mauris sed consequat sit. Amet nec, imperdiet sed eleifend non tortor nascetur fames.  <br />
-                Dolor at at quam habitant lacus tellus. Commodo elit sit mattis vivamus pretium, libero. Massa volutpat risus ipsum nisl id integer integer. Viverra quam sed sit sodales vivamus. Ut etiam sit non nunc netus.
-                Ornare arcu netus sagittis semper justo. Arcu magna bibendum gravida maecenas. Tincidunt mauris, amet feugiat quis tristique. Eget malesuada maecenas integer metus, vitae auctor lectus ac ut. Sed pretium adipiscing orci et at ac. At amet, sagittis in habitant ullamcorper justo, et. Ullamcorper amet ipsum orci tortor, vel risus aliquet.
-                </h6>
-            </div>
-            <div className={`${about.relaxation_img_right}`}>
-                <p className={`${about.about_btn} btn btn-primary`}>Relaxation</p>
-                <img src={About1} className={`${about.about_img} d-block`}  />
-                {/* C:\Users\acer\Desktop\project\Celahel_new\src\Assets */}
-            </div>
+  // console.log(navigate);
+  return (
+    <div className="container-fluid me-0 me-md-3 ">
+      <div className="d-lg-flex justify-content-between align-items-center about">
+        <div className="col-md-8 container flex-grow bd-highlight">
+          <h1 className="h1 text-primary">Buy/Book Relaxation</h1>
+          <p className="h6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            consequuntur in repudiandae officia fuga voluptatibus magnam odio
+            impedit voluptate reprehenderit id totam est sint quos facilis
+            laudantium esse iusto doloribus vero sunt culpa, modi porro nulla.
+            Beatae consequuntur, iusto doloremque quaerat quis vitae officia,
+            nemo ut officiis quos sint amet!
+          </p>
         </div>
-
-        <div className={`${about.about_container} `}>
-        <div className={`${about.relaxation_img_left} me-4`}>
-                <img src={About2} className={`${about.about_img} d-block`} alt="relaxation" />
-                <p className={`${about.about_btn_right} btn btn-warning`}>Get Hotel</p>
-            </div>
-            <div className="relaxation -text ">
-                <h3 className="text-primary text-center my-3">
-                    Buy/Book Hotel
-                </h3>
-                <h6 className=''>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales augue egestas nunc, auctor magna. In sit molestie nec urna auctor vitae. Id vel odio vitae aenean lectus sed gravida elementum. Senectus venenatis quis aliquet mauris sed consequat sit. Amet nec, imperdiet sed eleifend non tortor nascetur fames.  <br />
-                Dolor at at quam habitant lacus tellus. Commodo elit sit mattis vivamus pretium, libero. Massa volutpat risus ipsum nisl id integer integer. Viverra quam sed sit sodales vivamus. Ut etiam sit non nunc netus.
-                Ornare arcu netus sagittis semper justo. Arcu magna bibendum gravida maecenas. Tincidunt mauris, amet feugiat quis tristique. Eget malesuada maecenas integer metus, vitae auctor lectus ac ut. Sed pretium adipiscing orci et at ac. At amet, sagittis in habitant ullamcorper justo, et. Ullamcorper amet ipsum orci tortor, vel risus aliquet.
-                </h6>
-            </div>
-        </div>
-    
-        <div className={`${about.about_container} `}>
-            <div className="relaxation -text ">
-                <h3 className="text-primary text-center my-3">
-                    Buy/Rent House
-                </h3>
-                <h6 className=''>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales augue egestas nunc, auctor magna. In sit molestie nec urna auctor vitae. Id vel odio vitae aenean lectus sed gravida elementum. Senectus venenatis quis aliquet mauris sed consequat sit. Amet nec, imperdiet sed eleifend non tortor nascetur fames.  <br />
-                Dolor at at quam habitant lacus tellus. Commodo elit sit mattis vivamus pretium, libero. Massa volutpat risus ipsum nisl id integer integer. Viverra quam sed sit sodales vivamus. Ut etiam sit non nunc netus.
-                Ornare arcu netus sagittis semper justo. Arcu magna bibendum gravida maecenas. Tincidunt mauris, amet feugiat quis tristique. Eget malesuada maecenas integer metus, vitae auctor lectus ac ut. Sed pretium adipiscing orci et at ac. At amet, sagittis in habitant ullamcorper justo, et. Ullamcorper amet ipsum orci tortor, vel risus aliquet.
-                </h6>
-            </div>
-            <div className={`${about.relaxation_img_right}`}>
-                <p className={`${about.about_btn} btn btn-primary`}>Buy House</p>
-                <img src={About3} className={`${about.about_img} d-block`} alt="relaxation" />
-            </div>
-            
-        </div>
-
-        <div className={`${about.about_container} `}>
-        <div className={`${about.relaxation_img_left} me-4`}>
-                <img src={About4} className={`${about.about_img} d-block`} alt="relaxation" />
-                <p className={`${about.about_btn_right} btn btn-warning`}>Buy Hostel</p>
-            </div>
-            <div className="relaxation -text ">
-                <h3 className="text-primary text-center my-3">
-                    Buy/Rent Hostel
-                </h3>
-                <h6 className=''>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales augue egestas nunc, auctor magna. In sit molestie nec urna auctor vitae. Id vel odio vitae aenean lectus sed gravida elementum. Senectus venenatis quis aliquet mauris sed consequat sit. Amet nec, imperdiet sed eleifend non tortor nascetur fames.  <br />
-                Dolor at at quam habitant lacus tellus. Commodo elit sit mattis vivamus pretium, libero. Massa volutpat risus ipsum nisl id integer integer. Viverra quam sed sit sodales vivamus. Ut etiam sit non nunc netus.
-                Ornare arcu netus sagittis semper justo. Arcu magna bibendum gravida maecenas. Tincidunt mauris, amet feugiat quis tristique. Eget malesuada maecenas integer metus, vitae auctor lectus ac ut. Sed pretium adipiscing orci et at ac. At amet, sagittis in habitant ullamcorper justo, et. Ullamcorper amet ipsum orci tortor, vel risus aliquet.
-                </h6>
-            </div>
-        </div>
-
-        <div className={`${about.about_container} `}>
-            <div className="relaxation -text ">
-                <h3 className="text-primary text-center my-3">
-                    Buy/Rent Land
-                </h3>
-                <h6 className=''>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales augue egestas nunc, auctor magna. In sit molestie nec urna auctor vitae. Id vel odio vitae aenean lectus sed gravida elementum. Senectus venenatis quis aliquet mauris sed consequat sit. Amet nec, imperdiet sed eleifend non tortor nascetur fames.  <br />
-                Dolor at at quam habitant lacus tellus. Commodo elit sit mattis vivamus pretium, libero. Massa volutpat risus ipsum nisl id integer integer. Viverra quam sed sit sodales vivamus. Ut etiam sit non nunc netus.
-                Ornare arcu netus sagittis semper justo. Arcu magna bibendum gravida maecenas. Tincidunt mauris, amet feugiat quis tristique. Eget malesuada maecenas integer metus, vitae auctor lectus ac ut. Sed pretium adipiscing orci et at ac. At amet, sagittis in habitant ullamcorper justo, et. Ullamcorper amet ipsum orci tortor, vel risus aliquet.
-                </h6>
-            </div>
-            <div className={`${about.relaxation_img_right}`}>
-                <p className={`${about.about_btn} btn btn-primary`}>Bu House</p>
-                <img src={About5} className={`${about.about_img} d-block`} alt="relaxation" />
-            </div>
+        <div className="col-md-4 d-lg-flex justify-content-end position-relative">
+          <img
+            src={About1}
+            alt="Buy/Rent Hotel"
+            className="img-fluid w-100 flex-grow bd-highlight"
+          />
+          <span className="badge bg-primary p-2 align-self-start position-absolute top-50 start-0">
+            Relaxation
+          </span>
         </div>
       </div>
-    )
-}
-export default About
+      <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center about">
+        <div className="col-md-4 d-lg-flex position-relative order-last order-lg-first">
+          <img
+            src={About2}
+            alt="Buy/Rent Hotel"
+            className="img-fluid w-100 flex-fill bd-highlight"
+          />
+          <span className="badge bg-info p-2 align-self-end position-absolute top-50 end-0">
+            Get Hotel
+          </span>
+        </div>
+        <div className="col-md-8 container order-first order-lg-last">
+          <h1 className="h1 text-primary">Buy/Rent Hotel</h1>
+          <p className="h6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            consequuntur in repudiandae officia fuga voluptatibus magnam odio
+            impedit voluptate reprehenderit id totam est sint quos facilis
+            laudantium esse iusto doloribus vero sunt culpa, modi porro nulla.
+            Beatae consequuntur, iusto doloremque quaerat quis vitae officia,
+            nemo ut officiis quos sint amet!
+          </p>
+        </div>
+      </div>
+
+      <div className="d-lg-flex justify-content-between align-items-center about">
+        <div className="col-md-8 container">
+          <h1 className="h1 text-primary">Buy/Rent House</h1>
+          <p className="h6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            consequuntur in repudiandae officia fuga voluptatibus magnam odio
+            impedit voluptate reprehenderit id totam est sint quos facilis
+            laudantium esse iusto doloribus vero sunt culpa, modi porro nulla.
+            Beatae consequuntur, iusto doloremque quaerat quis vitae officia,
+            nemo ut officiis quos sint amet!
+          </p>
+        </div>
+
+        <div className="col-md-4 d-lg-flex justify-content-end position-relative">
+          <img
+            src={About3}
+            alt="Buy/Rent Hotel"
+            className="img-fluid w-100 flex-grow bd-highlight"
+          />
+          <span className="badge bg-purple p-2 align-self-start position-absolute top-50 start-0">
+            Rent House
+          </span>
+        </div>
+      </div>
+
+      <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center about">
+        <div className="col-md-4 d-lg-flex justify-content-end position-relative order-last">
+          <img
+            src={About4}
+            alt="Buy/Rent Hotel"
+            className="img-fluid w-100 flex-grow bd-highlight"
+          />
+          <span className="badge bg-danger p-2 align-self-start position-absolute top-50 end-0">
+            Buy House
+          </span>
+        </div>
+        <div className="col-md-8 container order-first order-lg-last form">
+          <h1 className="h1 text-primary">Buy/Rent Hostel</h1>
+          <p className="h6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            consequuntur in repudiandae officia fuga voluptatibus magnam odio
+            impedit voluptate reprehenderit id totam est sint quos facilis
+            laudantium esse iusto doloribus vero sunt culpa, modi porro nulla.
+            Beatae consequuntur, iusto doloremque quaerat quis vitae officia,
+            nemo ut officiis quos sint amet!
+          </p>
+        </div>
+      </div>
+
+      <div className="d-lg-flex justify-content-between align-items-center about">
+        <div className="col-md-8 container">
+          <h1 className="h1 text-primary">Buy/Rent Land</h1>
+          <p className="h6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            consequuntur in repudiandae officia fuga voluptatibus magnam odio
+            impedit voluptate reprehenderit id totam est sint quos facilis
+            laudantium esse iusto doloribus vero sunt culpa, modi porro nulla.
+            Beatae consequuntur, iusto doloremque quaerat quis vitae officia,
+            nemo ut officiis quos sint amet!
+          </p>
+        </div>
+        <div className="col-md-4 d-lg-flex justify-content-end position-relative">
+          <img
+            src={About5}
+            alt="Buy/Rent Hotel"
+            className="img-fluid w-100 flex-grow bd-highlight"
+            width="100%"
+          />
+          <span className="badge bg-warning p-2 align-self-start position-absolute top-50 start-0">
+            Get Land
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default About;

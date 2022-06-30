@@ -1,0 +1,59 @@
+.property_container {
+    /* display : none !important; */
+    margin:3rem 3rem 5rem 17rem !important; 
+    /* z-index : -1; */
+    /* margin-left: 10rem !important; */
+}
+.property_text  {
+    font-family: monospace;
+    display : block !important;
+}
+.property_image {
+    width: 17.5rem !important; 
+    position : relative;
+}
+.image_container {
+    position : relative  !important;
+}
+.sell_badge {
+    position : absolute;
+    top :2rem;
+    left : 2rem;
+    background-color : rgba(255, 0, 0, 0.8);
+    opacity : 1;
+}
+.rent_badge {
+    position : absolute;
+    top :2rem;
+    left : 2rem;
+    background-color : rgba(0, 255, 0, 0.8);
+    opacity : 1;
+}
+.add_property {
+    display : flex !important;
+    justify-content : space-between !important;
+}
+.property_text {
+    position : absolute;
+    bottom : 1rem;
+    left : 1.2rem;
+    color : white;
+    font-size: 0.8rem;
+}
+@media (max-width : 540px) {
+    .property_container {
+        display: block !important;
+        /* width : 100vw !important; */
+        margin : 1rem 1rem 1rem 1rem !important;
+    }
+    .property_image {
+        width: 10rem !important; 
+        position : relative;
+    }
+    .sell_badge, .rent_badge, .property_text {
+        display : none !important;
+    }
+    .search_container, .add_property {
+        display : block !important;
+    }
+}

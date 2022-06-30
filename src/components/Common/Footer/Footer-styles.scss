@@ -7,3 +7,8 @@ $max-width: 1024px;
     color: $main-color;
     min-height: 25vh;
 }
+.store{
+    line-height: 1rem !important;
+    overflow: hidden;
+    max-width: 150px !important;
+}
