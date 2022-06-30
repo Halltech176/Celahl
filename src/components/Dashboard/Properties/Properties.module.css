@@ -1,59 +1,55 @@
 .property_container {
-    /* display : none !important; */
-    margin:3rem 3rem 5rem 17rem !important; 
-    /* z-index : -1; */
-    /* margin-left: 10rem !important; */
+    margin:1rem 3rem 5rem 17rem !important; 
 }
-.property_text  {
-    font-family: monospace;
-    display : block !important;
+.search_container {
+   display: flex;
+   justify-content: flex-end;
 }
+/* .add_property {
+    display: flex;
+    justify-content: space-between; */
+    /* flex-wrap: wrap; */
+/* } */
 .property_image {
-    width: 17.5rem !important; 
-    position : relative;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 .image_container {
-    position : relative  !important;
+    position: relative;
 }
-.sell_badge {
-    position : absolute;
-    top :2rem;
-    left : 2rem;
-    background-color : rgba(255, 0, 0, 0.8);
-    opacity : 1;
+.sell_badge, .rent_badge {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    /* margin-left: 0.5rem; */
+    background-color: rgba(255, 0, 0, 0.9);
 }
 .rent_badge {
-    position : absolute;
-    top :2rem;
-    left : 2rem;
-    background-color : rgba(0, 255, 0, 0.8);
-    opacity : 1;
-}
-.add_property {
-    display : flex !important;
-    justify-content : space-between !important;
+    background-color: rgba(50, 255, 0, 0.7);
 }
 .property_text {
-    position : absolute;
-    bottom : 1rem;
-    left : 1.2rem;
-    color : white;
-    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
+    margin-left: 0.3rem;
 }
-@media (max-width : 540px) {
+
+@media (max-width : 600px) {
     .property_container {
-        display: block !important;
-        /* width : 100vw !important; */
-        margin : 1rem 1rem 1rem 1rem !important;
+        z-index: -5;
+        padding: 1rem;
+        width: 100vw;
+        /* background-color: red; */
+        margin:1rem auto !important; 
+    }
+    .search_container, .add_property, .property_image, .image_container, .rent_badge,.sell_badge {
+        display: block;
+        z-index: -5 !important;
     }
     .property_image {
-        width: 10rem !important; 
-        position : relative;
-    }
-    .sell_badge, .rent_badge, .property_text {
-        display : none !important;
-    }
-    .search_container, .add_property {
-        display : block !important;
+        width: 18rem;
+        margin: .8rem;
     }
 }

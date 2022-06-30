@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {  useNavigate } from "react-router-dom";
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import  signin from "./Signin.module.css";
 import { FormInput } from "./FormInputs";
 import {  useDispatch } from "react-redux";
@@ -10,6 +12,7 @@ const Signin = () => {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const notify = () => toast('Enter valid inputs')
 
   const initial_values = {
     firstName : "",
@@ -23,7 +26,6 @@ const Signin = () => {
   };
   const [values, setValues] = useState(initial_values);
   const [formErrors, setFormErrors] = useState("");
-  const [submitErrMessage, setSubmitErrMessage] = useState("")
 
   const handleChange = (e) => {
     setValues({...values, [e.target.name]: e.target.value });
@@ -45,7 +47,7 @@ const Signin = () => {
     navigate('/profile')
    }
    else {
-    setSubmitErrMessage('Enter valid inputs')
+    notify()
    }
     console.log(Object.keys(formErrors));
   };
@@ -72,10 +74,10 @@ const Signin = () => {
   return (
     <>  
         <div className={`container`}>
+          <ToastContainer type='error'/>
     <div className={`text-center`}>
         <h1 style={{color : '#101828', fontWeight : '500'}} className="">Welcome</h1>
        <p className="">Welcome! Please enter your details</p>
-       <p style={{color  :"red", fontSize : '2rem'}}>{submitErrMessage}</p>
     </div>
           <form
         onSubmit={handleSubmit}

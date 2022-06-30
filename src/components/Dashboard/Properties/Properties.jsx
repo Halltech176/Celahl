@@ -11,22 +11,28 @@ const Properties = () => {
     <>
       <Sidebar/>
   <div className ={`${properties.property_container}` }>
-    <div className={`${properties.search_container} d-flex justify-content-end my-3`}>
-    <div className={`${properties.property_search}  input-group w-50 `}>
-        <input type="search" name="" className='form-control w-75' id="" />
+
+    {/* search container */}
+
+    <div className={`${properties.search_container}`}>
+    <div className={`${properties.property_search}  input-group  `}>
+        <input type="search" name="" className='form-control' id="" />
         <div className="input-group-append d-inline"><img src={searchIcon} alt ='search' /></div>
     </div>
     </div>
-    <div className={`${properties.add_property} my-3 mx-2`}>
-    <h2  className={`${properties.profile_text} ms-4  text-primary`}> My Properties</h2>
-   <Link to ='/addproperty' className={`${properties.profile_text}`}> <button className='btn btn-primary px-5'>Add New</button></Link>
+
+    {/* Add property */}
+
+    <div className={`${properties.add_property} my-3`}>
+    {/* <h2  className={`${properties.property_text} text-danger`}> My Properties</h2> */}
+   <Link to ='/addproperty' className={`${properties.add_btn}`}> <button className='btn btn-primary px-5'>Add New</button></Link>
    </div>
-
-   <div className={`${properties.properties_image} d-flex gap-2 flex-wrap  `}>
-
+  
+  {/* Property images */}
+    <div className={`${properties.property_image}`}>
 
     <div className={`${properties.image_container}`} >
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
+    <span  className={`${properties.sell_badge} badge px-4 py-1`}>For Sell</span>
     <div className={`${properties.property_text}`}>
         <p className='h4'>Adeyemi Villa</p>
         <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
@@ -35,128 +41,23 @@ const Properties = () => {
     <img src = {property_image} alt='img' className={`${properties.property_image}`}  />
     </div>
 
-
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.rent_badge} badge  px-4 py-2`}>For Sell</span>
+    <div className={`${properties.image_container}`} >
+    <span  className={`${properties.rent_badge} badge px-4 py-1`}>For Sell</span>
     <div className={`${properties.property_text}`}>
         <p className='h4'>Adeyemi Villa</p>
         <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
+        <p className='text-danger'>$44, 000</p>        
     </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
+    <img src = {property_image} alt='img' className={`${properties.property_image}`}  />
+    </div>
+
+    <div className={`${properties.image_container}`} >
+    <img src = {property_image} alt='img' className={`${properties.property_image}`}  />
+    </div>
+
     </div>
 
 
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.rent_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.rent_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.rent_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-
-
-
-    <div className={`${properties.image_container}`}>
-    <span  className={`${properties.sell_badge} badge  px-4 py-2`}>For Sell</span>
-    <div className={`${properties.property_text}`}>
-        <p className='h4'>Adeyemi Villa</p>
-        <p className='h6'>N0. 69 Olamid City, Ogbomoso, <br/> Oyo state </p>
-        <p className='text-danger'>$44, 000</p>
-    </div>
-    <img src = {property_image}  alt='img' className={`${properties.property_image}`}  />
-    </div>
-  </div>
   </div>
   </>
   )
