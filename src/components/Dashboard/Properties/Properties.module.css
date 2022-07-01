@@ -1,59 +1,89 @@
-.property_container {
-    /* display : none !important; */
-    margin:3rem 3rem 5rem 17rem !important; 
-    /* z-index : -1; */
-    /* margin-left: 10rem !important; */
+.properties_image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: 12rem;
 }
-.property_text  {
-    font-family: monospace;
-    display : block !important;
-}
-.property_image {
-    width: 17.5rem !important; 
-    position : relative;
-}
-.image_container {
-    position : relative  !important;
-}
-.sell_badge {
-    position : absolute;
-    top :2rem;
-    left : 2rem;
-    background-color : rgba(255, 0, 0, 0.8);
-    opacity : 1;
-}
-.rent_badge {
-    position : absolute;
-    top :2rem;
-    left : 2rem;
-    background-color : rgba(0, 255, 0, 0.8);
-    opacity : 1;
+.search_container {
+  display: flex;
+  justify-content: center;
+  margin-left: 40rem;
+  margin-right: 2rem;
 }
 .add_property {
-    display : flex !important;
-    justify-content : space-between !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15rem;
+}
+.sell_badge,
+.rent_badge,
+.property_text {
+  position: absolute;
+}
+.sell_badge,
+.rent_badge {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.sell_badge {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+.rent_badge {
+  background-color: rgba(0, 255, 0, 0.8);
 }
 .property_text {
-    position : absolute;
-    bottom : 1rem;
-    left : 1.2rem;
-    color : white;
-    font-size: 0.8rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  color: white;
 }
-@media (max-width : 540px) {
-    .property_container {
-        display: block !important;
-        /* width : 100vw !important; */
-        margin : 1rem 1rem 1rem 1rem !important;
-    }
-    .property_image {
-        width: 10rem !important; 
-        position : relative;
-    }
-    .sell_badge, .rent_badge, .property_text {
-        display : none !important;
-    }
-    .search_container, .add_property {
-        display : block !important;
-    }
+.image_container {
+  position: relative;
+  margin: 1rem 1rem 1rem 0rem;
 }
+@media (max-width: 600px) {
+  .property_container {
+    margin: 1rem;
+  }
+  .add_property {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0rem;
+  }
+  .property_search {
+    display: flex;
+    justify-content: center;
+  }
+  .image_container {
+    box-shadow: 2px 2px 0.6rem 0.1rem rgb(141, 140, 140);
+    margin: 2rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+  }
+  .image_container:hover {
+    transform: scale(0.8);
+  }
+  .search_container {
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+  .properties_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 0.1rem !important;
+  }
+  .sell_badge,
+  .rent_badge,
+  .property_text {
+    position: static;
+  }
+  .property_text {
+    color: black;
+  }
+}
+/* @media (max-width: ); */
