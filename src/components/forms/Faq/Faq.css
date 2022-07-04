@@ -1,0 +1,34 @@
+div.images {
+    display: block;
+    position: relative;
+    margin: .5rem 4rem;
+    /* margin: 2rem 4rem; */
+}
+div.images  .img-1 {
+    position: absolute;
+    z-index: 1;
+    top: 1.5rem;
+    left: 30%;
+}
+div.images  .img-2 {
+    position: absolute;
+    left: 48%;
+    z-index: 1;
+    top: 1.5rem;
+}
+div.images  .img-3 {
+    position: absolute;
+    left: 38%;
+    z-index: 1;
+    top: 1.5rem;
+}
+div.contact-link {
+    margin: 6rem 0rem 2rem 0rem !important;
+}
+div.faq-box {
+    color: white;
+    /* background-image: url('../../../public/assets/image 5.png'); */
+    mix-blend-mode: darken;
+    background-color: blue;
+    opacity: 40%;
+}

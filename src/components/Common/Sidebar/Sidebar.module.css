@@ -1,0 +1,39 @@
+.sidebar_container {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem 3rem 3rem 0rem !important;
+}
+.profile_image {
+  width: 5rem;
+  height: 5rem;
+}
+.sidebar_list {
+  list-style-type: none;
+  display: flex;
+  padding-left: 1rem !important;
+  line-height: 2.5rem;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  font-family: monospace;
+  cursor: pointer;
+}
+.sidebar_link {
+  text-decoration: none;
+  color: white;
+}
+.close_menu_btn {
+  display: none;
+  position: absolute;
+  right: 0;
+  transition: display ease-in 5s;
+}
+@media (max-width: 540px) {
+  .close_menu_btn {
+    display: block;
+  }
+}

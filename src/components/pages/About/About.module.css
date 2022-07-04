@@ -1,0 +1,29 @@
+div.relaxation_img_right, .relaxation_img_left{
+    position: relative;
+}
+img.about_img {
+    width: 18rem !important;
+    margin-top: -3rem;
+}
+.about_container {
+    display: flex;
+    justify-content: space-between !important;
+}
+.about_btn {
+    position: absolute;
+    top: 40%;
+}
+.about_btn_right {
+    position: absolute;
+    right: 0rem;
+    top: 40%;
+}
+@media (max-width : 500px) {
+    .about_container {
+        display: block;
+        margin: 0rem !important;
+    }
+    img.about_img {
+        order: 1 !important;
+    }
+}
