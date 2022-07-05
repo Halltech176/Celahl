@@ -82,7 +82,7 @@ const Signin = () => {
   ));
   return (
     <>
-      <ToastContainer Zoom={true} autoClose={800} />
+      <ToastContainer transition={Zoom} autoClose={800} />
       <div className={`container`}>
         <div className={`text-center`}>
           <h1 style={{ color: "#101828", fontWeight: "500" }} className="">
