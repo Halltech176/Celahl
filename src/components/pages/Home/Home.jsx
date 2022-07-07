@@ -1,17 +1,21 @@
 import React from "react";
 import "./home.styles.scss";
 import { FaStar } from "react-icons/fa";
-import displayImage from '../../../Assets/house3.png'
-import iPhone from '../../../Assets/iPhone.png'
+import PlayBadge from "../../../Assets/Mobile_play_store_badge.png";
+import AppBadge from "../../../Assets/Mobile app store badge.png";
+import displayImage from "../../../Assets/house3.png";
+import displayImage2 from "../../../Assets/house2.png";
+import displayImage3 from "../../../Assets/img2.png";
+import iPhone from "../../../Assets/iPhone.png";
 
 function Home() {
   return (
     <div>
-      <div className="row hero bg-primary">
+      <div className="d-lg-flex justify-content-between align-items-end hero bg-primary">
         <div className="col-12 col-md-6">
-          <div className="container pt-3">
+          <div className="container p-3 mb-5">
             <p className="text-white fw-bold display-2">
-             <span className="dotted"> Discover</span> <br />
+              <span className="dotted"> Discover</span> <br />
               Most Suitable <br />
               Property
             </p>
@@ -21,58 +25,100 @@ function Home() {
               atque at maxime cupiditate recusandae non corrupti sequi voluptas
               pariatur vero eius!
             </p>
-            <button className="btn btn-light mt-3 btn-block">Get Mobile App</button>
+            <button className="btn btn-light mt-3 btn-lg">
+              Get Mobile App
+            </button>
           </div>
         </div>
         <div className="col-12 col-md-6">
           <div className="container">
-            <div className="imgContainer px-0">
+            <div className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner imgContainer">
+                  <span className="badge bg-primary p-3 shadow-lg">
+                    Relaxation
+                  </span>
+                  <span className="badge bg-info p-3 shadow-lg">
+                    Get Hostel
+                  </span>
+                  <span className="badge bg-danger p-3 shadow-lg">
+                    Buy House
+                  </span>
+                  <span className="badge bg-success p-3 shadow-lg">
+                    Rent House
+                  </span>
+                <div className="carousel-item active px-0">
+                  <img
+                    src={displayImage}
+                    alt="Display Image 1"
+                    className="img-fluid w-100"
+                  />
+
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={displayImage2}
+                    alt="Display Image 2"
+                    className="img-fluid w-100"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={displayImage3}
+                    alt="Display Image 3"
+                    className="img-fluid w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* <div className="imgContainer px-0">
               <span className="badge bg-primary p-3 shadow-lg">Relaxation</span>
               <span className="badge bg-info p-3 shadow-lg">Get Hostel</span>
               <span className="badge bg-danger p-3 shadow-lg">Buy House</span>
               <span className="badge bg-success p-3 shadow-lg">Rent House</span>
-              <img src={displayImage} alt="" height="100%" width="100%" />
-            </div>
+              <img src={displayImage} alt="" className="img-fluid w-100"/>
+            </div> */}
           </div>
         </div>
       </div>
 
-      <div className="howItWorks">
+      <div className="my-5 p-3">
         <div className="container text-center">
           <h2>How It Works</h2>
-          <p className="lead">Our Unique process gives you peace of mind for all our services</p>
-          <div className="row">
-            <div className="col">
-              <div className="card bg-primary p-5 my-3 text-light shadow-lg">
+          <p className="lead">
+            Our Unique process gives you peace of mind for all our services
+          </p>
+          <div className="row g-5 cards">
+            <div className="col-lg">
+              <div className="card p-5 my-3 text-light shadow-lg">
                 <div className="circle bg-white text-center text-dark">
                   <span>1</span>
                 </div>
-                <h3 className="text-center">Search</h3>
-                <p className="text-left">
+                <h3 className="text-center card-title">Search</h3>
+                <p className="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatum, repudiandae.
                 </p>
               </div>
             </div>
-            <div className="col">
-              <div className="card bg-primary p-5 my-3 text-light shadow-lg">
+            <div className="col-lg">
+              <div className="card p-5 my-3 text-light shadow-lg">
                 <div className="circle bg-white text-center text-dark">
                   <span>2</span>
                 </div>
-                <h3 className="text-center">Search</h3>
-                <p className="text-left">
+                <h3 className="card-title text-center">Search</h3>
+                <p className="card-text text-left">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatum, repudiandae.
                 </p>
               </div>
             </div>
-            <div className="col">
-              <div className="card bg-primary p-5 my-3 text-light shadow-lg">
+            <div className="col-lg">
+              <div className="card p-5 my-3 text-light shadow-lg">
                 <div className="circle bg-white text-center text-dark">
                   <span>3</span>
                 </div>
-                <h3 className="text-center">Search</h3>
-                <p className="text-left">
+                <h3 className="card-title text-center">Search</h3>
+                <p className="card-text text-left">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptatum, repudiandae.
                 </p>
@@ -81,7 +127,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="Clients howItWorks">
+      <div className="my-5 p-3">
         <div className="container-fluid text-center">
           <h2>What Our Clients Say</h2>
           <p>
@@ -103,17 +149,19 @@ function Home() {
                 </div>
 
                 <div>
-                  <q className="lead text-left">
+                  <q className="card-text text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laboriosam consequatur soluta, nam tenetur possimus
                     excepturi error debitis doloremque illo doloribus.
                   </q>
                 </div>
-                <p className="h3 text-primary">John Carter</p>
+                <p className="h3 text-primary card-title">John Carter</p>
                 <p className="small text-primary">Web Designer</p>
               </div>
             </div>
-            <div className="col"> <div className="card p-3 marq-card">
+            <div className="col">
+              {" "}
+              <div className="card p-3 marq-card">
                 <div className="d-flex flex-column justify-content-start align-items-start mb-3">
                   <div>
                     <FaStar color="blue"></FaStar>
@@ -125,16 +173,19 @@ function Home() {
                 </div>
 
                 <div>
-                  <q className="lead text-left">
+                  <q className="card-text text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laboriosam consequatur soluta, nam tenetur possimus
                     excepturi error debitis doloremque illo doloribus.
                   </q>
                 </div>
-                <p className="h3 text-primary">Sophie Moore</p>
+                <p className="h3 text-primary card-title">Sophie Moore</p>
                 <p className="small text-primary">Head of Marketing</p>
-              </div></div>
-            <div className="col"> <div className="card p-3 marq-card">
+              </div>
+            </div>
+            <div className="col">
+              {" "}
+              <div className="card p-3 marq-card">
                 <div className="d-flex flex-column justify-content-start align-items-start mb-3">
                   <div>
                     <FaStar color="blue"></FaStar>
@@ -146,16 +197,19 @@ function Home() {
                 </div>
 
                 <div>
-                  <q className="lead text-left">
+                  <q className="card-text text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laboriosam consequatur soluta, nam tenetur possimus
                     excepturi error debitis doloremque illo doloribus.
                   </q>
                 </div>
-                <p className="h3 text-primary">Matt Canon</p>
+                <p className="h3 text-primary card-title">Matt Canon</p>
                 <p className="small text-primary">Lead Developer</p>
-              </div></div>
-            <div className="col"> <div className="card p-3 marq-card">
+              </div>
+            </div>
+            <div className="col">
+              {" "}
+              <div className="card p-3 marq-card">
                 <div className="d-flex flex-column justify-content-start align-items-start mb-3">
                   <div>
                     <FaStar color="blue"></FaStar>
@@ -167,43 +221,35 @@ function Home() {
                 </div>
 
                 <div>
-                  <q className="lead text-left">
+                  <q className="card-text text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laboriosam consequatur soluta, nam tenetur possimus
                     excepturi error debitis doloremque illo doloribus.
                   </q>
                 </div>
-                <p className="h3 text-primary">Andy Smith</p>
+                <p className="h3 text-primary card-title">Andy Smith</p>
                 <p className="small text-primary">VP of Marketing</p>
-              </div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="doMore howItWorks">
+      <div className="lastSection">
         <div className="container my-5">
-          <div className="row bg-primary rounded-sm p-3">
-            <div className="col-6 text-light">
-              <h3>
-                Get Our App & Do More
-
-              </h3>
+          <div className="d-lg-flex justify-content-between bg-primary rounded-sm p-5">
+            <div className="col-lg-6 text-light">
+              <h3>Get Our App & Do More</h3>
               <p>You can do anything you want with just a click on our app.</p>
-              <div className="d-flex">
-                <button className="btn-outlined-light bg-dark text-light my-2 p-2">
-                  <span className="d-block">Download on the</span>
-                  <span className="h4">App Store</span>
-                </button>
-                <button className="btn-outlined-light bg-dark text-light mx-3 my-2 p-2">
-                <span className="d-block">Get it on</span>
-                  <span className="h4">Google play</span>
-                </button>
+              <div className="d-lg-flex">
+                <img src={AppBadge} alt="" className="mx-lg-2 my-2 my-lg-0" />
+                <img src={PlayBadge} alt="" className="mx-lg-2" />
               </div>
             </div>
-            <div className="col-6">
-            <div className="phone">
-               <img src={iPhone} alt="" width='90%' height='100%'/>
-            </div>
+            <div className="col-lg-6">
+              <div className="phone">
+                <img src={iPhone} alt="" height="300%" />
+              </div>
             </div>
           </div>
         </div>

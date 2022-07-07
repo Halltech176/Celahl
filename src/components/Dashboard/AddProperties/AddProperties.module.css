@@ -20,8 +20,8 @@
 
 @media (max-width: 600px) {
   .property_container {
-    margin-left: 0rem;
-    margin-right: 0rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .property_search {
     display: flex;
@@ -49,7 +49,7 @@
   }
   .property_image {
     margin: 1rem;
-    display: flex;
+    /* display: flex; */
     width: 8rem;
   }
 }

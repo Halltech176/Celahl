@@ -10,6 +10,8 @@ import Profile from "./components/Dashboard/Profile/Profile";
 import Properties from "./components/Dashboard/Properties/Properties";
 import AddProperties from "./components/Dashboard/AddProperties/AddProperties";
 import Overview from "./components/Dashboard/Overview/Overview";
+import Account_plan from "./components/Dashboard/Account_plan/Plan.component";
+import Notification from "./components/Dashboard/Notifications/Notifications.component";
 
 import Contact from "./components/forms/Contact/Contact";
 import Signin from "./components/forms/Signin/Signin";
@@ -23,11 +25,22 @@ import NoMatch from "./components/routes/NoMatch";
 
 function App() {
   const location = useLocation();
+  const path = location.pathname;
+  console.log(path);
 
   return (
     <>
       <div className="project-container">
-        <Navbar />
+        {path === "/about" ||
+        path === "/faqs" ||
+        path === "/" ||
+        path === "/login" ||
+        path === "/signin" ||
+        path === "/contact" ? (
+          <Navbar />
+        ) : (
+          ""
+        )}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -41,11 +54,20 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/addproperty" element={<AddProperties />} />
+          <Route path="/upgrade" element={<Account_plan />} />
           <Route path="/overview" element={<Overview />} />
+          <Route path="/notification" element={<Notification />} />
         </Routes>
-
-        {/* <Routes></Routes> */}
-        {/* <Footer/> */}
+        {path === "/" ||
+        path === "/about" ||
+        path === "/faqs" ||
+        path === "/login" ||
+        path === "/signin" ||
+        path === "/contact" ? (
+          <Footer />
+        ) : (
+          ""
+        )}
       </div>
     </>
   );

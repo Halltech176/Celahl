@@ -95,7 +95,7 @@ const Sidebar = () => {
               color="white"
               className="me-2 d-inline-block text-center"
             />
-            <Link to="/accout" className={`${sidebar.sidebar_link}`}>
+            <Link to="/upgrade" className={`${sidebar.sidebar_link}`}>
               Account Plan
             </Link>
           </li>
@@ -124,9 +124,11 @@ const Sidebar = () => {
         <div
           className={`${sidebar.upgrade_container} text-center d-flex flex-column justify-content-center align-items-center my-5 `}
         >
-          <button className="btn btn-primary bg-white text-primary py-2 px-4">
-            UPGRADE
-          </button>
+          <Link to="/upgrade">
+            <button className="btn btn-primary bg-white text-primary py-2 px-4">
+              UPGRADE
+            </button>
+          </Link>
           <p className={`${sidebar.upgrade_text} text-white`}>
             Upgrade account type <br /> for more features
           </p>

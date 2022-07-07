@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import signin from "./Signin.module.css";
 import { FormInput } from "./FormInputs";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { UserDetails } from "../../../Redux/UserSlice";
 import { Validate } from "./ValidateForm";
 import { ToastContainer, toast, Zoom } from "react-toastify";
@@ -53,12 +53,13 @@ const Signin = () => {
     if (Object.keys(formErrors).length === 0) {
       window.localStorage.setItem("user", JSON.stringify(userInputs));
       const user = JSON.parse(window.localStorage.getItem("user"));
-      dispatch(UserDetails(user));
       navigate("/properties");
     } else {
       errorNotification();
     }
   };
+  const details = useSelector((state) => state);
+  console.log(details);
 
   const renderInputs = FormInput.map((inputs, index) => (
     <div key={index} className="m-1 col-md-5">
