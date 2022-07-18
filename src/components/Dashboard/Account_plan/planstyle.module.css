@@ -16,7 +16,8 @@
   color: #fff;
 } */
 .planstyleContainer {
-  margin-left: 18rem;
+  margin-top: 2rem;
+  margin-left: 22rem;
 }
 @media (max-width: 600px) {
   .planstyleContainer {

@@ -22,7 +22,7 @@ function Plan() {
         <div>
           <h2 className="text-primary  small text-center h4">PRICING</h2>
           <h1 className="h1 text-primary text-center">
-            Affordable pricing plans
+            Affordable pricing plans!!!
           </h1>
           <p className="m-3 lead">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur

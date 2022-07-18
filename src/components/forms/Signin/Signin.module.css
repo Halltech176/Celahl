@@ -2,8 +2,9 @@
 
 input:active,
 input:hover,
-input:focus {
-  border: 2px solid rgb(116, 113, 113) !important;
+input:focus,
+select {
+  border: 2px solid #d0d5dd;
   box-shadow: none !important;
 }
 .signin_btn {
@@ -12,5 +13,8 @@ input:focus {
 label {
   font-family: "Inter", sans-serif;
   color: #344054;
-  font-weight: 200 !important;
+  font-weight: 500 !important;
+}
+.login_container {
+  width: 30rem;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast, Zoom } from "react-toastify";
 import login from "./Login.module.css";
@@ -7,10 +7,22 @@ import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
 
-  const errorNotification = () =>
+  const errorNotification = () => {
     toast.error("Please enter valid email and password");
+    setPassword("");
+    setEmail("");
+  };
+  const hist = window.history;
+  useEffect(() => {
+    window.addEventListener("popstate", () => {
+      hist.pushState(null, null, navigate("/login"));
+      errorNotification();
+    });
+  }, [hist]);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem("user"));
@@ -18,62 +30,69 @@ const Login = () => {
       ? navigate("/properties")
       : errorNotification();
   };
-  console.log(email);
-  console.log(password);
+
   return (
-    <div className="login">
-      <ToastContainer Zoom={true} autoClose={800} />
-      <div className={`container`}></div>
+    <div className="login my-5">
+      <ToastContainer transition={Zoom} autoClose={800} />
+
       <div className="container">
         <form
           id="form-container"
-          className="w-75 mx-auto row g-2 justify-content-center align-items-center"
+          className={`${login.login_container} row  g-3 mx-auto align-items-center justify-content-center`}
         >
-          <div className="welcome col-md-8 ">
-            <h3 className="text-bold">Welcome</h3>
-            <p className="">Welcome back! Please enter your details</p>
+          <div className="welcome text-left col-12 ">
+            <h4 className={`${login.heading_text}`}>Welcome back</h4>
+            <p className={`${login.welcome_text}`}>
+              Welcome back! Please enter your details
+            </p>
           </div>
-
-          <div className="col-md-8 col-sm-12">
+          <div className="col-12">
             <label htmlFor="" className="form-label">
               Email
             </label>
             <input
-              type="text"
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-control"
             />
           </div>
 
-          <div className="col-md-8 col-sm-12">
+          <div className="col-12">
             <label htmlFor="" className="form-label">
               Password
             </label>
-            <input type="text" className="form-control" />
-          </div>
-
-          <div className="checkbox col-md-5">
             <input
-              type="checkbox"
+              type="text"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="me-2"
-              name="checkbox"
-              id="checkbox"
+              className="form-control"
             />
-            <label htmlFor="" className="">
-              Remeber for 30 days
-            </label>
           </div>
-          <div className="forgot_password col-md-3 text-start">
-            <p>Forgotten password</p>
+          <div
+            className={`${login.verify} col-md d-flex justify-content-between`}
+          >
+            <div className="checkbox ">
+              <input
+                type="checkbox"
+                value={password}
+                className="me-2"
+                name="checkbox"
+                id="checkbox"
+              />
+              <label htmlFor="" className="">
+                Remeber for 30 days
+              </label>
+            </div>
+            <div className="forgot_password">
+              <p>Forgotten password</p>
+            </div>
           </div>
-          <div className="button_container text-center">
+          <div className="button_container col-md-12  text-center">
             <button
               type="submit"
               onClick={handleLogin}
-              className={`${login.login_btn} btn btn-primary py-2 px-5`}
+              className={`${login.login_btn} w-100 btn btn-primary py-2 px-5`}
             >
               Sign in
             </button>

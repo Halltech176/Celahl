@@ -1,19 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit'
 
-const user = JSON.parse(window.localStorage.getItem("user"));
-// console.log(user);
+const user = JSON.parse(window.localStorage.getItem('user'))
 const initialState = {
-  user: user,
-};
+    user: user
+}
 const UserSlice = createSlice({
-  name: "fullname",
-  initialState,
-  reducers: {
-    UserDetails: (state, action) => {
-      state.user = action.payload;
-    },
-  },
-});
+    name : 'fullname',
+    initialState,
+    reducers : {
+        UserDetails : (state, action) => {
+            const {firstName, lastName} = action.payload
+            state.firstName = firstName
+            state.lastName = lastName
+            // state.lastName = action.payload.lastName
+            state = action.payload
+        }
+    }
+})
 
-export const UserReducer = UserSlice.reducer;
-export const { UserDetails } = UserSlice.actions;
+export const UserReducer = UserSlice.reducer
+export const {UserDetails} = UserSlice.actions

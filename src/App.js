@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Footer from "./components/Common/Footer/Footer";
 import Navbar from "./components/Common/Navbar/Navbar";
@@ -5,19 +6,24 @@ import Sidebar from "./components/Common/Sidebar/Sidebar";
 
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
+import Profile from "./components/pages/Profile/Profile";
 
-import Profile from "./components/Dashboard/Profile/Profile";
 import Properties from "./components/Dashboard/Properties/Properties";
 import AddProperties from "./components/Dashboard/AddProperties/AddProperties";
+import Notifications from "./components/Dashboard/Notifications/Notifications.component";
 import Overview from "./components/Dashboard/Overview/Overview";
-import Account_plan from "./components/Dashboard/Account_plan/Plan.component";
-import Notification from "./components/Dashboard/Notifications/Notifications.component";
+import Plan from "./components/Dashboard/Account_plan/Plan.component";
 
 import Contact from "./components/forms/Contact/Contact";
 import Signin from "./components/forms/Signin/Signin";
 import Login from "./components/forms/Login/Login";
 import Faq from "./components/forms/Faq/Faq";
-
+import RequireAuth from "./Redux/RequireAuth";
+// import Plan from "./components/Account_plan/Plan.component";
+// import MakePayment from './components/forms/Payment/MakePayment';
+// import OTP from './components/OTP/OTP';
+// import Notifications from "./components/pages/Notifications/Notifications.component";
+import Result from "./components/Results/Result.component";
 import "./App.css";
 import NoMatch from "./components/routes/NoMatch";
 
@@ -26,7 +32,6 @@ import NoMatch from "./components/routes/NoMatch";
 function App() {
   const location = useLocation();
   const path = location.pathname;
-  console.log(path);
 
   return (
     <>
@@ -54,15 +59,18 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/addproperty" element={<AddProperties />} />
-          <Route path="/upgrade" element={<Account_plan />} />
+          <Route path="/upgrade" element={<Plan />} />
           <Route path="/overview" element={<Overview />} />
-          <Route path="/notification" element={<Notification />} />
+          <Route path="/require" element={<RequireAuth />} />
+          {/* <Route path='/Make_payment' element={<MakePayment/>}/>
+        <Route path='/OTP_Verify' element={<OTP/>}/> */}
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/results" element={<Result />} />
+          <Route path="*" element={<NoMatch />} />
         </Routes>
         {path === "/" ||
         path === "/about" ||
         path === "/faqs" ||
-        path === "/login" ||
-        path === "/signin" ||
         path === "/contact" ? (
           <Footer />
         ) : (

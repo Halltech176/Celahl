@@ -1,3 +1,5 @@
-.project_container {
-    background : #E5E5E5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

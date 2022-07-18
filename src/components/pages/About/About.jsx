@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component }  from 'react';
 import "./About.module.scss";
 
 import About1 from "../../../Assets/About1.png";
@@ -12,7 +12,7 @@ const About = () => {
     <div className="container-fluid me-0 me-md-3 ">
       <div className="d-lg-flex justify-content-between align-items-center about">
         <div className="col-md-8 container flex-grow bd-highlight">
-          <h1 className="h1 text-primary">Buy/Book Relaxation</h1>
+          <h1 className="h1 text-primary text-center">Buy/Book Relaxation</h1>
           <p className="h6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
             consequuntur in repudiandae officia fuga voluptatibus magnam odio
@@ -40,16 +40,12 @@ const About = () => {
             alt="Buy/Rent Hotel"
             className="img-fluid w-100 flex-fill bd-highlight"
           />
-          <span
-            className="badge bg-info  px-4 py-2 align-self-end position-absolute pos-right 
-          end-0
-          top-50"
-          >
+          <span className="badge bg-info  px-4 py-2 align-self-end position-absolute end-0 end-lg-0 top-50">
             Get Hotel
           </span>
         </div>
         <div className="col-md-8 container order-first order-lg-last">
-          <h1 className="h1 text-primary">Buy/Rent Hotel</h1>
+          <h1 className="h1 text-primary text-center">Buy/Rent Hotel</h1>
           <p className="h6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
             consequuntur in repudiandae officia fuga voluptatibus magnam odio
@@ -63,7 +59,7 @@ const About = () => {
 
       <div className="d-lg-flex justify-content-between align-items-center about">
         <div className="col-md-8 container">
-          <h1 className="h1 text-primary">Buy/Rent House</h1>
+          <h1 className="h1 text-primary text-center">Buy/Rent House</h1>
           <p className="h6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
             consequuntur in repudiandae officia fuga voluptatibus magnam odio
@@ -93,15 +89,12 @@ const About = () => {
             alt="Buy/Rent Hotel"
             className="img-fluid w-100 flex-grow bd-highlight"
           />
-          <span
-            className="badge bg-danger  px-4 py-2 align-self-start position-absolute pos-right 
-          end-0 top-50"
-          >
+          <span className="badge bg-danger  px-4 py-2 align-self-start position-absolute end-0 end-lg-0 top-50">
             Buy House
           </span>
         </div>
         <div className="col-md-8 container order-first order-lg-last form">
-          <h1 className="h1 text-primary">Buy/Rent Hostel</h1>
+          <h1 className="h1 text-primary text-center">Buy/Rent Hostel</h1>
           <p className="h6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
             consequuntur in repudiandae officia fuga voluptatibus magnam odio
@@ -115,7 +108,7 @@ const About = () => {
 
       <div className="d-lg-flex justify-content-between align-items-center about">
         <div className="col-md-8 container">
-          <h1 className="h1 text-primary">Buy/Rent Land</h1>
+          <h1 className="h1 text-primary text-center">Buy/Rent Land</h1>
           <p className="h6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
             consequuntur in repudiandae officia fuga voluptatibus magnam odio

@@ -6,7 +6,7 @@ const Notifications = () => {
   return (
     <>
       <Sidebar />
-      <div>
+      <div className ={`${notificationstyles.notification_container}`}>
         <div className="container">
           <header className="h2 text-primary">Notification</header>
 

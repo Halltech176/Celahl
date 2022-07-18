@@ -1,8 +1,8 @@
 import React from "react";
 import "./home.styles.scss";
 import { FaStar } from "react-icons/fa";
-import PlayBadge from "../../../Assets/Mobile_play_store_badge.png";
-import AppBadge from "../../../Assets/Mobile app store badge.png";
+import PlayBadge from "../../../Assets/MobilePlayStore.svg";
+import AppBadge from "../../../Assets/MobileAppStore.svg";
 import displayImage from "../../../Assets/house3.png";
 import displayImage2 from "../../../Assets/house2.png";
 import displayImage3 from "../../../Assets/img2.png";
@@ -242,8 +242,8 @@ function Home() {
               <h3>Get Our App & Do More</h3>
               <p>You can do anything you want with just a click on our app.</p>
               <div className="d-lg-flex">
-                <img src={AppBadge} alt="" className="mx-lg-2 my-2 my-lg-0" />
-                <img src={PlayBadge} alt="" className="mx-lg-2" />
+                <img src={AppBadge} alt="" className="my-2 my-lg-0" />
+                <img src={PlayBadge} alt="" className="" />
               </div>
             </div>
             <div className="col-lg-6">

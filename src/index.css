@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.bg-purple{
+  background-color: var(--bs-purple) !important;
+  color: white;
+}
+ul{
+  list-style-type: none;
+}
+ul li{
+  margin: .5rem 0;
+  cursor: pointer;
+  color: #6c757d;
+}
+ul li a{
+  margin: .5rem 0;
+  cursor: pointer;
+  color: #6c757d;
+  text-decoration: none;
 }

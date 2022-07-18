@@ -1,10 +1,10 @@
 .contact_container {
     width: 50% !important;
-    margin: 0 auto;
+    /* background-color: #fff; */
 }
 .contact_footer_img {
     display: block !important;
-    max-width: 40% !important;
+    max-width: 80% !important;
     margin: 0 auto !important;
 }
 .contact_footer {
@@ -12,7 +12,7 @@
 }
 @media (max-width : 500px) {
     .contact_container  {
-        width: 75% !important;
+        width: 100% !important;
     }
     .contact_footer {
         display: block !important;

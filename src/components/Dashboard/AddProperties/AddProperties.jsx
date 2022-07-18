@@ -5,6 +5,8 @@ import properties from "./AddProperties.module.css";
 import property_image from "../../../Assets/house.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import searchBtn from "../../../Assets/SearchVector.png";
+
 const AddProperties = () => {
   const [property, setProperty] = useState("");
   const [address, setAddress] = useState("");
@@ -17,16 +19,15 @@ const AddProperties = () => {
       <Sidebar />
       <div className={`${properties.property_container}`}>
         <div className="row">
-          {/* <div className={`${properties.search_container} col-md-9`}>
-            <div className={`${properties.property_search}  input-group `}>
-              <input type="search" name="" className="form-control" id="" />
-              <div className="input-group-append d-inline">
-                <span className="input-group-text  text-light bg-primary">
-                  search
-                </span>
-              </div>
+          <div className={`${properties.search_container}`}>
+            <div>
+              <input className="form-control" placeholder="search" />
+              <span>
+                <img src={searchBtn} />
+              </span>
             </div>
-          </div> */}
+          </div>
+          {/* <div></div> */}
           <div className="col-md-8 d-flex align-items-center">
             <CgArrowLongLeft size="3rem" onClick={Back} />
             <h2 className={`${properties.profile_text} ms-4  text-primary`}>
@@ -34,10 +35,8 @@ const AddProperties = () => {
               Edit properties
             </h2>
           </div>
-          <h4 className="text-primary d-none fw-100">
-            Upload Property Picture
-          </h4>
-          <div className={`${properties.properties_image}`}>
+          <h4 className="text-primary my-4">Upload Property Picture</h4>
+          <div className={`${properties.properties_image} m3-4`}>
             <div className={`${properties.main_img_container}`}>
               <img
                 src={property_image}
@@ -78,9 +77,9 @@ const AddProperties = () => {
               />
             </div>
           </div>
-          <h4 className="text-primary fw-100">
+          <h5 className="text-primary fw-100">
             Enter Correct Property Details
-          </h4>
+          </h5>
 
           <form
             id="form-container"

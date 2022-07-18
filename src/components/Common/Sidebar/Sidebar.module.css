@@ -1,30 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Fira+Code:wght@500&family=Inter:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,700&display=swap");
 .sidebar_container {
   z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 0.5rem 3rem 3rem 0rem !important;
+  padding: 0.5rem 2rem 1rem 0rem !important;
+  background-color: #2563eb;
+  width: 20rem;
+}
+.sidebar_nav {
+  display: none;
+}
+.toggle_btn {
+  transform: rotate(360 deg);
+  transition: all 5s ease-in-out;
+}
+.profile_img {
+  background: transparent;
+  border: 1px solid blue;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 .profile_image {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
+}
+.list_container {
+  padding: 0;
+}
+.sidebar_list:focus {
+  color: white;
 }
 .sidebar_list {
-  list-style-type: none;
   display: flex;
-  padding-left: 1rem !important;
-  line-height: 2.5rem;
   align-items: center;
-  font-size: 1.2rem;
-  font-weight: 200;
-  letter-spacing: 0.5px;
-  font-family: monospace;
+  font-family: "DM Mono", monospace;
+  margin: 0.5rem 0rem;
+  color: #fff;
+  font-size: 1.625rem;
   cursor: pointer;
+  padding-left: 2rem;
+}
+.sidebar_list > img {
+  width: 2rem;
+}
+.sidebar_list:hover {
+  border-left: 2px solid #fff;
+}
+.sidebar_list > a:hover {
+  color: #fff;
 }
 .sidebar_link {
   text-decoration: none;
   color: white;
+  font-family: "DM Mono", monospace;
+  font-size: 1.5rem;
 }
 .close_menu_btn {
   display: none;
@@ -32,8 +63,60 @@
   right: 0;
   transition: display ease-in 5s;
 }
+.upgrade_btn {
+  /* display: none; */
+  width: 60%;
+  font-size: 1.25rem;
+  border: none;
+  color: #2563eb;
+  font-weight: 400;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.upgrade_text {
+  font-family: inter;
+  /* font-weight: 100; */
+  font-size: 0.8rem;
+}
+.upgrade_link {
+  text-decoration: none;
+}
+
 @media (max-width: 540px) {
+  .sidebar_container {
+    /* display: none; */
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 2s ease transform 3.5s;
+    animation: Sidebar 0.7s ease forwards;
+    padding: 0.5rem 3rem 3rem 0rem !important;
+  }
+  .show {
+    display: none;
+  }
+  .sidebar_nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar_link {
+    font-size: 1.3rem;
+  }
+  /* upgrade_btn */
+
   .close_menu_btn {
     display: block;
+  }
+  @keyframes Sidebar {
+    from {
+      display: none;
+      width: 0;
+    }
+    to {
+      width: 73%;
+      display: block;
+    }
   }
 }
